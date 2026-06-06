@@ -38,9 +38,13 @@ export function Navbar() {
           href="/"
           className="flex items-center gap-2 text-sm font-semibold tracking-tight text-foreground"
         >
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-accent-fg">
-            AT
-          </span>
+          <img
+            src="/logo-mark.svg"
+            alt=""
+            width={32}
+            height={32}
+            className="h-8 w-8"
+          />
           <span className="hidden sm:inline">{profile.name}</span>
         </Link>
 

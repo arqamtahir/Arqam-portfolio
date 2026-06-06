@@ -10,9 +10,13 @@ export function Footer() {
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
             <Link href="/" className="flex items-center gap-2 text-sm font-semibold text-foreground">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-accent-fg">
-                AT
-              </span>
+              <img
+                src="/logo-mark.svg"
+                alt=""
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
               {profile.name}
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-muted">
