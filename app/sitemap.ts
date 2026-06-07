@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/lib/resume";
+import { getAllPosts } from "@/lib/blog";
 import { siteUrl } from "@/lib/metadata";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -20,5 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...routes, ...projectRoutes];
+  const blogRoutes = getAllPosts().map((post) => ({
+    url: `${siteUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "yearly" as const,
+    priority: 0.6,
+  }));
+
+  return [...routes, ...projectRoutes, ...blogRoutes];
 }
