@@ -21,13 +21,13 @@ export function ExperimentCard({
   return (
     <article
       className={[
-        "group flex flex-col overflow-hidden rounded-3xl border border-border bg-surface transition-colors hover:border-border-strong",
+        "group flex w-full min-w-0 flex-col overflow-hidden rounded-3xl border border-border bg-surface transition-colors hover:border-border-strong",
         variant === "featured" ? "" : "h-full",
       ].join(" ")}
     >
       {/* Header */}
       <header className="flex items-start justify-between gap-4 border-b border-border p-6 md:p-7">
-        <div>
+        <div className="min-w-0">
           <div className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-wide text-accent">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             {meta.category}
@@ -42,7 +42,7 @@ export function ExperimentCard({
       </header>
 
       {/* Live area */}
-      <div className="relative flex-1 bg-surface-muted/30 p-6 md:p-7">
+      <div className="relative w-full min-w-0 flex-1 overflow-hidden bg-surface-muted/30 p-6 md:p-7">
         {Live ? <Live /> : null}
       </div>
 

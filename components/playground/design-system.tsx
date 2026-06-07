@@ -36,7 +36,7 @@ function Panel({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-3xl border border-border bg-surface p-6 md:p-7">
+    <div className="min-w-0 overflow-hidden rounded-3xl border border-border bg-surface p-6 md:p-7">
       <div className="flex items-baseline justify-between gap-3">
         <h3 className="text-sm font-semibold tracking-tight text-foreground">
           {title}
@@ -84,7 +84,9 @@ function TypeScale() {
           <span className="w-16 shrink-0 font-mono text-[11px] text-subtle">
             {t.label}
           </span>
-          <span className={`${t.cls} text-foreground`}>Performance</span>
+          <span className={`${t.cls} min-w-0 truncate text-foreground`}>
+            Performance
+          </span>
         </div>
       ))}
     </div>

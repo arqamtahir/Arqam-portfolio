@@ -74,7 +74,7 @@ export default function PlaygroundPage() {
         </Reveal>
         <div className="mt-10 grid gap-6">
           {featuredExperiments.map((meta, i) => (
-            <Reveal key={meta.id} delay={i * 0.06}>
+            <Reveal key={meta.id} delay={i * 0.06} className="min-w-0">
               <ExperimentCard meta={meta} variant="featured" />
             </Reveal>
           ))}

@@ -158,7 +158,7 @@ export function CommandPalette() {
           onKeyDown={onKey}
           placeholder="Type a command or search…"
           aria-label="Command palette input"
-          className="w-full bg-transparent text-sm text-foreground placeholder:text-subtle focus:outline-none"
+          className="w-full min-w-0 bg-transparent text-sm text-foreground placeholder:text-subtle focus:outline-none"
         />
         <kbd className="hidden rounded border border-border px-1.5 py-0.5 font-mono text-[10px] text-subtle sm:inline">
           ⌘K
@@ -196,7 +196,7 @@ export function CommandPalette() {
               />
               <span
                 className={cn(
-                  "relative flex-1",
+                  "relative min-w-0 flex-1 truncate",
                   active === i ? "text-foreground" : "text-muted"
                 )}
               >

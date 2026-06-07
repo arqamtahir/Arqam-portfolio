@@ -53,6 +53,7 @@ export function ExperimentLibrary({ experiments }: { experiments: ExperimentMeta
               animate={{ opacity: 1, y: 0 }}
               exit={reduce ? undefined : { opacity: 0, y: -8 }}
               transition={{ duration: 0.4, ease }}
+              className="min-w-0"
             >
               <ExperimentCard meta={meta} />
             </motion.div>
