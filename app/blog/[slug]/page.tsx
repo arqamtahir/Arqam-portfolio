@@ -70,6 +70,29 @@ function articleJsonLd(slug: string) {
   };
 }
 
+function breadcrumbJsonLd(slug: string) {
+  const post = getPostBySlug(slug)!;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${siteUrl}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `${siteUrl}/blog/${post.slug}`,
+      },
+    ],
+  };
+}
+
 export default async function BlogPostPage({
   params,
 }: {
@@ -170,6 +193,7 @@ export default async function BlogPostPage({
       )}
 
       <JsonLd data={articleJsonLd(slug)} />
+      <JsonLd data={breadcrumbJsonLd(slug)} />
     </div>
   );
 }

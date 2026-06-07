@@ -40,6 +40,29 @@ function caseStudyJsonLd(slug: string) {
   };
 }
 
+function breadcrumbJsonLd(slug: string) {
+  const project = projects.find((p) => p.slug === slug)!;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Projects",
+        item: `${siteUrl}/projects`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: project.name,
+        item: `${siteUrl}/projects/${slug}`,
+      },
+    ],
+  };
+}
+
 export default async function ProjectDetailPage({
   params,
 }: {
@@ -58,6 +81,7 @@ export default async function ProjectDetailPage({
     <div>
       <CaseStudy project={project} study={study} next={next} />
       <JsonLd data={caseStudyJsonLd(slug)} />
+      <JsonLd data={breadcrumbJsonLd(slug)} />
     </div>
   );
 }
