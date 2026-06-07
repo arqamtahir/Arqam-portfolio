@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   motion,
   useReducedMotion,
@@ -18,6 +19,12 @@ import type { CaseStudy as CaseStudyData, Project } from "@/lib/resume";
 import { ArchitectureDiagram } from "./architecture-diagram";
 
 import { EASE as ease } from "@/lib/motion";
+
+const SCREENSHOT_SLUGS = new Set([
+  "nice2stay",
+  "staywithlumina",
+  "hotel-weekend",
+]);
 
 const SECTIONS = [
   { id: "summary", label: "Executive summary" },
@@ -118,6 +125,24 @@ export function CaseStudy({
           </div>
         </div>
       </header>
+
+      {/* Screenshot */}
+      {SCREENSHOT_SLUGS.has(project.slug) && (
+        <div className="container-page pt-12 md:pt-16">
+          <div className="relative aspect-video overflow-hidden rounded-xl border border-border bg-surface shadow-sm">
+            <Image
+              src={`/images/projects/${project.slug}.png`}
+              alt={`${project.name} — built by Arqam Tahir using ${project.stack
+                .slice(0, 3)
+                .join(", ")}`}
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="object-cover object-top"
+            />
+          </div>
+        </div>
+      )}
 
       {/* Body */}
       <div className="container-page grid gap-12 py-16 md:py-20 lg:grid-cols-[220px_1fr] lg:gap-16">

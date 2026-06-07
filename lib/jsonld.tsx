@@ -22,6 +22,14 @@ export function personJsonLd() {
     email: profile.email,
     jobTitle: profile.titles[0],
     description: profile.summary,
+    image: {
+      "@type": "ImageObject",
+      url: `${siteUrl}/images/projects/arqam-tahir-portfolio.png`,
+      width: 1200,
+      height: 800,
+      caption:
+        "Arqam Tahir — Senior Software Engineer, Next.js and React specialist",
+    },
     sameAs: [profile.links.github, profile.links.linkedin],
     knowsAbout: [
       "React",

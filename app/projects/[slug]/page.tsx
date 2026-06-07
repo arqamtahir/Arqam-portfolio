@@ -24,9 +24,16 @@ export async function generateMetadata({
   });
 }
 
+const projectImages: Record<string, string> = {
+  nice2stay: `${siteUrl}/images/projects/nice2stay.png`,
+  staywithlumina: `${siteUrl}/images/projects/staywithlumina.png`,
+  "hotel-weekend": `${siteUrl}/images/projects/hotel-weekend.png`,
+};
+
 function caseStudyJsonLd(slug: string) {
   const project = projects.find((p) => p.slug === slug)!;
   const study = caseStudies[slug];
+  const imageUrl = projectImages[project.slug];
   return {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
@@ -37,6 +44,17 @@ function caseStudyJsonLd(slug: string) {
     keywords: project.stack.join(", "),
     about: project.category.join(", "),
     author: { "@type": "Person", name: "Arqam Tahir", url: siteUrl },
+    ...(imageUrl
+      ? {
+          image: {
+            "@type": "ImageObject",
+            url: imageUrl,
+            width: 1200,
+            height: 800,
+            caption: `${project.name} — developed by Arqam Tahir, Senior Software Engineer`,
+          },
+        }
+      : {}),
   };
 }
 
