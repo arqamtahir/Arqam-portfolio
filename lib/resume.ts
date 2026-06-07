@@ -14,7 +14,7 @@ export const profile = {
   ],
   tagline: "Building high-performance web applications that scale.",
   subtagline:
-    "Specializing in React, Next.js, Vue, Node.js, cloud infrastructure, SEO optimization, and modern product engineering.",
+    "Specializing in React, Next.js, TypeScript, Vue, Node.js, cloud infrastructure, SEO optimization, and modern product engineering.",
   summary:
     "Results-driven Senior Software Engineer with 5+ years of experience architecting and delivering scalable, high-performance web applications across travel-tech, hospitality, e-commerce, and SaaS platforms. Expert in full-stack JavaScript using the MERN and MEAN stacks, with a consistent record of measurable impact: sub-3s LCP, 100/100 Lighthouse SEO, and 40%+ faster component delivery.",
   location: "Lahore, Pakistan",

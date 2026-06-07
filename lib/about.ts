@@ -79,7 +79,7 @@ export const workingStyle = [
   },
   {
     title: "I communicate in outcomes.",
-    body: "Stakeholders care about conversion, speed, and reach — not framework names. I translate technical work into the language of the people relying on it.",
+    body: "Stakeholders care about conversion, speed, and reach — not framework names. Working remote-first across time zones, I translate technical work into the language of the people relying on it.",
   },
   {
     title: "I iterate against real signals.",
