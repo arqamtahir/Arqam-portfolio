@@ -49,6 +49,8 @@ export default async function Image({ params }) {
 
 Every style is inline, the layout is flexbox, and the result rasterizes in milliseconds.
 
+A few constraints are worth committing to memory before you hit them in production. Every element that contains more than one child must explicitly declare `display: flex`, because the engine does not assume block layout the way a browser does. There is no grid, no float, and no cascade from a stylesheet, so all styling is inline. Background images and gradients work but must be expressed in the supported subset. And because there is no line clamping engine like a browser's, long titles do not truncate on their own. The mental model that prevents most surprises is to assume nothing from CSS works unless you have confirmed it does, and to lean entirely on flexbox for layout.
+
 > The mental shift that makes next/og click is realizing you are not styling a web page. You are describing a layout to a rasterizer, and the rules of that rasterizer are narrower and stricter than CSS.
 
 ## Fonts are the most common stumbling block
@@ -68,11 +70,15 @@ return new ImageResponse(<Card title={title} />, {
 
 For applications with international content, this is where care pays off. Load a font that covers the scripts your content uses, or you will ship cards with missing glyphs to exactly the users whose language you failed to account for.
 
+There is a real tension to manage here between coverage and weight. A font file that covers every script is large, and loading a large font on every image generation adds latency and bandwidth. The pragmatic approach for a multilingual site is to inspect the text you are about to render and load only the font subset that covers it, or to maintain a small set of per script fonts and choose the right one based on the content. Another sharp edge is emoji and symbols, which are not covered by typical text fonts at all and render as blanks unless you supply a dedicated emoji font or strip them. Titles with emoji are common in user generated content, so decide deliberately whether to support them rather than discovering blank boxes after launch.
+
 ## Caching is what makes it scale
 
 Generating an image is cheap per request but not free, and you do not want to regenerate the same card on every share. The right posture is to treat these images as cacheable assets. For pages whose content is stable, the image can be generated once and served from cache thereafter. The route convention integrates with the framework's caching, so a statically known route produces a static image at build time, and a dynamic route can be cached at the edge after first generation.
 
 The lever to reason about is how often the underlying content changes. A blog post card changes only when the post changes, so it should be cached aggressively. A card that embeds live data, such as a current follower count, needs a shorter cache life or it will show stale numbers. Match the cache lifetime to the volatility of the content, and the generation cost amortizes to nearly nothing across all the times the link is shared.
+
+It helps to think about who actually requests these images, because it changes the caching math. The requester is almost never the end user's browser directly. It is a platform's link scraper, fetching the image once when someone pastes the URL, and then serving its own cached copy to everyone who sees the post. This means two layers of cache sit between your generator and the viewer: yours and the platform's. Your job is to make the first scrape cheap and correct, because the platform will hold onto whatever it gets for a long time. For content that never changes after publish, generating the image once at build time and serving it as a static asset is the ideal, because the per request cost drops to zero and the only generation ever happens during the build.
 
 ## Designing a card system, not one card
 
@@ -89,9 +95,22 @@ export function renderCard({ eyebrow, title, subtitle }) {
 
 This is the same instinct you apply to the rest of your UI: build the system once, feed it data many times. A shared card renderer means a brand refresh is one change, not a hundred.
 
+The detail that makes a templated system robust is handling variable content gracefully, because real titles are not all the same length. A template that looks perfect with a five word title overflows or shrinks awkwardly with a twenty word one. Build the template to handle the range: cap the title to a sensible number of lines, choose a font size that works for the longest realistic title rather than the prettiest short one, and ensure the layout degrades cleanly when an optional field like a subtitle is absent. The test of a good card template is not how it looks with ideal content, it is how it looks with the worst real content your routes will throw at it.
+
 ## Verifying the output
 
 Social platforms cache the images they scrape, so a broken card can persist in a platform's cache even after you fix it. Verify cards before they ship by rendering the route directly and inspecting the PNG, and use the platforms' own debugging tools to force a fresh scrape when you update a template. Catching a layout overflow or a missing glyph before launch is far cheaper than discovering it after the link has been shared and cached widely.
+
+The persistence of platform caches deserves real respect, because it changes how you ship template changes. When you redesign your card template, every link already shared keeps showing the old image until the platform re-scrapes, which may be never for old posts. The platform debugging tools let you force a refresh for specific URLs, but you cannot realistically refresh thousands of existing links. The practical consequence is to treat the card template as something close to an API: get it right before it ships widely, version it carefully, and accept that old shares will carry the old design for a long time. The cheapest moment to catch a problem is before the first scrape, which is why rendering the route directly and eyeballing the PNG during development is a habit worth keeping.
+
+## Practical takeaways
+
+- Treat `next/og` as a constrained flexbox rasterizer, not a browser. Declare `display: flex` on every multi child element and assume no CSS feature works until confirmed.
+- Load real font bytes for your brand, supply only the weights and subsets you need, and plan deliberately for non Latin scripts and emoji rather than shipping blank glyphs.
+- Cache in proportion to content volatility. Generate static cards at build time where possible, and remember the requester is usually a platform scraper that caches your output again.
+- Build one parameterized card renderer rather than per route cards, so a brand change is one edit.
+- Design templates for the worst realistic content: clamp long titles, size type for the longest case, and degrade cleanly when optional fields are missing.
+- Verify the PNG before launch, because platform caches hold a broken card long after you fix it and cannot be refreshed in bulk.
 
 ## The summary
 
