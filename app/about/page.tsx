@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/motion";
 import { CopyEmail } from "@/components/ui/copy-email";
-import { JsonLd, personJsonLd } from "@/lib/jsonld";
 import { profile } from "@/lib/resume";
 import {
   principles,
@@ -257,8 +256,6 @@ export default function AboutPage() {
           </div>
         </Reveal>
       </section>
-
-      <JsonLd data={personJsonLd()} />
     </div>
   );
 }
