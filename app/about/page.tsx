@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/motion";
@@ -36,27 +37,42 @@ export default function AboutPage() {
         className="pointer-events-none absolute -top-48 left-1/2 h-[34rem] w-[52rem] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"
       />
       <section className="container-page relative">
-        <div className="max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.18em] text-subtle">
-            {profile.titles[0]} · {profile.experienceYears} years
-          </p>
-          <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl">
-            I build web products where{" "}
-            <span className="text-accent">performance is the experience</span>{" "}
-            — not an afterthought.
-          </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted">
-            I&apos;m Arqam — a senior engineer specializing in high-performance,
-            SEO-first web applications across travel-tech, hospitality, and SaaS.
-            I care about the boring parts that users feel: speed, reliability,
-            reach, and interfaces that get out of the way.
-          </p>
-          <Reveal delay={0.18}>
-            <dl className="mt-10 grid max-w-xl grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-3">
-              <Fact label="Currently" value="Senior SWE @ Nice2Stay" />
-              <Fact label="Based in" value={profile.location} />
-              <Fact label="Focus" value="Performance · SEO · Product" />
-            </dl>
+        <div className="grid items-center gap-12 lg:grid-cols-[1fr_minmax(280px,360px)] lg:gap-16">
+          <div className="max-w-3xl">
+            <p className="text-sm font-medium uppercase tracking-[0.18em] text-subtle">
+              {profile.titles[0]} · {profile.experienceYears} years
+            </p>
+            <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl">
+              I build web products where{" "}
+              <span className="text-accent">performance is the experience</span>{" "}
+              — not an afterthought.
+            </h1>
+            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted">
+              I&apos;m Arqam — a senior engineer specializing in high-performance,
+              SEO-first web applications across travel-tech, hospitality, and SaaS.
+              I care about the boring parts that users feel: speed, reliability,
+              reach, and interfaces that get out of the way.
+            </p>
+            <Reveal delay={0.18}>
+              <dl className="mt-10 grid max-w-xl grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-3">
+                <Fact label="Currently" value="Senior SWE @ Nice2Stay" />
+                <Fact label="Based in" value={profile.location} />
+                <Fact label="Focus" value="Performance · SEO · Product" />
+              </dl>
+            </Reveal>
+          </div>
+
+          <Reveal delay={0.12} className="order-first lg:order-none">
+            <div className="relative mx-auto aspect-[3/4] w-full max-w-[320px] overflow-hidden rounded-2xl border border-border bg-surface shadow-lg">
+              <Image
+                src="/images/arqam-tahir.png"
+                alt="Arqam Tahir, senior full stack engineer specializing in Next.js and React, in a tailored brown suit"
+                fill
+                priority
+                sizes="(max-width: 1024px) 320px, 360px"
+                className="object-cover object-top"
+              />
+            </div>
           </Reveal>
         </div>
       </section>

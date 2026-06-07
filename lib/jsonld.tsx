@@ -24,9 +24,9 @@ export function personJsonLd() {
     description: profile.summary,
     image: {
       "@type": "ImageObject",
-      url: `${siteUrl}/images/projects/arqam-tahir-portfolio.png`,
-      width: 1200,
-      height: 800,
+      url: `${siteUrl}/images/arqam-tahir.png`,
+      width: 2176,
+      height: 3840,
       caption:
         "Arqam Tahir — Senior Software Engineer, Next.js and React specialist",
     },
