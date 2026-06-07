@@ -17,6 +17,28 @@ export function ExperimentCard({
   variant?: "default" | "featured";
 }) {
   const Live = experimentComponents[meta.id];
+  const liveRef = React.useRef<HTMLDivElement>(null);
+  const [inView, setInView] = React.useState(false);
+
+  React.useEffect(() => {
+    const node = liveRef.current;
+    if (!node || inView) return;
+    if (typeof IntersectionObserver === "undefined") {
+      setInView(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [inView]);
 
   return (
     <article
@@ -42,8 +64,11 @@ export function ExperimentCard({
       </header>
 
       {/* Live area */}
-      <div className="relative w-full min-w-0 flex-1 overflow-hidden bg-surface-muted/30 p-6 md:p-7">
-        {Live ? <Live /> : null}
+      <div
+        ref={liveRef}
+        className="relative w-full min-w-0 flex-1 overflow-hidden bg-surface-muted/30 p-6 md:p-7"
+      >
+        {Live && inView ? <Live /> : <div className="min-h-[12rem]" aria-hidden />}
       </div>
 
       {/* Footer — tags + why */}

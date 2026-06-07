@@ -55,9 +55,9 @@ export default async function ProjectDetailPage({
   const next = projects[(index + 1) % projects.length];
 
   return (
-    <main>
+    <div>
       <CaseStudy project={project} study={study} next={next} />
       <JsonLd data={caseStudyJsonLd(slug)} />
-    </main>
+    </div>
   );
 }

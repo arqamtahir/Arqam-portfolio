@@ -13,28 +13,22 @@ export const metadata: Metadata = pageMetadata({
 
 export default function ProjectsPage() {
   return (
-    <main className="pb-28 pt-28 md:pt-36">
+    <div className="pb-28 pt-28 md:pt-36">
       {/* Editorial hero */}
       <section className="container-page">
-        <Reveal>
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-surface-muted px-3 py-1 text-xs font-medium text-muted">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            Case-study library
-          </span>
-        </Reveal>
-        <Reveal delay={0.06}>
-          <h1 className="mt-6 max-w-4xl text-balance text-5xl font-semibold leading-[1.04] tracking-tight text-foreground md:text-7xl">
-            Production platforms,
-            <br className="hidden sm:block" /> documented as case studies.
-          </h1>
-        </Reveal>
-        <Reveal delay={0.12}>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            Three travel and hospitality platforms I engineered end-to-end — each
-            told as a story of the problem, the approach, and the measurable impact.
-            Every fact here comes from real, shipped work.
-          </p>
-        </Reveal>
+        <span className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-surface-muted px-3 py-1 text-xs font-medium text-muted">
+          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+          Case-study library
+        </span>
+        <h1 className="mt-6 max-w-4xl text-balance text-5xl font-semibold leading-[1.04] tracking-tight text-foreground md:text-7xl">
+          Production platforms,
+          <br className="hidden sm:block" /> documented as case studies.
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+          Three travel and hospitality platforms I engineered end-to-end — each
+          told as a story of the problem, the approach, and the measurable impact.
+          Every fact here comes from real, shipped work.
+        </p>
         <Reveal delay={0.18}>
           <dl className="mt-12 grid max-w-2xl grid-cols-2 gap-6 border-t border-border pt-8 sm:grid-cols-4">
             <Stat value="3" label="Production platforms" />
@@ -46,7 +40,7 @@ export default function ProjectsPage() {
       </section>
 
       <ProjectsExplorer projects={projects} />
-    </main>
+    </div>
   );
 }
 

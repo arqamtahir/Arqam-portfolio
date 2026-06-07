@@ -35,15 +35,14 @@ export function Hero() {
       <div className="container-page relative grid items-center gap-12 pb-16 pt-16 md:pb-24 md:pt-24 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
         {/* Left — value proposition */}
         <div className="max-w-xl">
-          <motion.div {...fade(0)}>
+          <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-3 py-1.5 text-xs font-medium text-muted backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-accent" />
               Available for freelance, consulting &amp; full-time roles
             </span>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            {...fade(0.08)}
+          <h1
             className="mt-6 text-balance text-5xl font-semibold leading-[1.04] tracking-tight text-foreground md:text-6xl lg:text-[4.1rem]"
           >
             Building high-performance web apps that{" "}
@@ -65,14 +64,11 @@ export function Hero() {
               </svg>
             </span>
             .
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            {...fade(0.16)}
-            className="mt-6 max-w-lg text-lg leading-relaxed text-muted"
-          >
+          <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted">
             {profile.subtagline}
-          </motion.p>
+          </p>
 
           <motion.div {...fade(0.24)} className="mt-8 flex flex-wrap items-center gap-3">
             <Button href="/projects" size="lg">

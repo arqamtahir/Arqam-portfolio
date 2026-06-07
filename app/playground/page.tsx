@@ -40,26 +40,20 @@ export default function PlaygroundPage() {
       {/* Hero */}
       <section className="container-page relative">
         <div className="max-w-3xl">
-          <Reveal>
-            <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wide text-accent">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              The lab
-            </div>
-          </Reveal>
-          <Reveal delay={0.06}>
-            <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl">
-              Where interface systems get{" "}
-              <span className="text-accent">built before they ship.</span>
-            </h1>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-              A space for interaction systems, UI experiments, and frontend
-              engineering exploration. Each one is a small, working answer to a
-              problem that shows up in real products — and a window into how I
-              think about motion, state, and craft.
-            </p>
-          </Reveal>
+          <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wide text-accent">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            The lab
+          </div>
+          <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            Where interface systems get{" "}
+            <span className="text-accent">built before they ship.</span>
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+            A space for interaction systems, UI experiments, and frontend
+            engineering exploration. Each one is a small, working answer to a
+            problem that shows up in real products — and a window into how I
+            think about motion, state, and craft.
+          </p>
         </div>
       </section>
 

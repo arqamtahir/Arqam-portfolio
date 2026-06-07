@@ -23,7 +23,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function AboutPage() {
   return (
-    <main className="relative overflow-hidden pb-28 pt-28 md:pt-36">
+    <div className="relative overflow-hidden pb-28 pt-28 md:pt-36">
       {/* ── Hero ───────────────────────────────────────────── */}
       <div
         aria-hidden
@@ -31,26 +31,20 @@ export default function AboutPage() {
       />
       <section className="container-page relative">
         <div className="max-w-3xl">
-          <Reveal>
-            <p className="text-sm font-medium uppercase tracking-[0.18em] text-subtle">
-              {profile.titles[0]} · {profile.experienceYears} years
-            </p>
-          </Reveal>
-          <Reveal delay={0.06}>
-            <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl">
-              I build web products where{" "}
-              <span className="text-accent">performance is the experience</span>{" "}
-              — not an afterthought.
-            </h1>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted">
-              I&apos;m Arqam — a senior engineer specializing in high-performance,
-              SEO-first web applications across travel-tech, hospitality, and SaaS.
-              I care about the boring parts that users feel: speed, reliability,
-              reach, and interfaces that get out of the way.
-            </p>
-          </Reveal>
+          <p className="text-sm font-medium uppercase tracking-[0.18em] text-subtle">
+            {profile.titles[0]} · {profile.experienceYears} years
+          </p>
+          <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            I build web products where{" "}
+            <span className="text-accent">performance is the experience</span>{" "}
+            — not an afterthought.
+          </h1>
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted">
+            I&apos;m Arqam — a senior engineer specializing in high-performance,
+            SEO-first web applications across travel-tech, hospitality, and SaaS.
+            I care about the boring parts that users feel: speed, reliability,
+            reach, and interfaces that get out of the way.
+          </p>
           <Reveal delay={0.18}>
             <dl className="mt-10 grid max-w-xl grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-3">
               <Fact label="Currently" value="Senior SWE @ Nice2Stay" />
@@ -201,7 +195,7 @@ export default function AboutPage() {
                 </div>
               </Reveal>
             ))}
-            <div className="border-t border-border" />
+            <li aria-hidden className="border-t border-border" />
           </ol>
         </div>
       </Section>
@@ -258,7 +252,7 @@ export default function AboutPage() {
       </section>
 
       <JsonLd data={personJsonLd()} />
-    </main>
+    </div>
   );
 }
 

@@ -16,7 +16,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function ContactPage() {
   return (
-    <main className="relative overflow-hidden pb-24 pt-28 md:pt-32">
+    <div className="relative overflow-hidden pb-24 pt-28 md:pt-32">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-40 left-1/2 h-[32rem] w-[48rem] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"
@@ -25,27 +25,21 @@ export default function ContactPage() {
       <div className="container-page relative">
         {/* Header */}
         <div className="max-w-2xl">
-          <Reveal>
-            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-surface-muted px-3 py-1 text-xs font-medium text-muted">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-              </span>
-              Available now
+          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-surface-muted px-3 py-1 text-xs font-medium text-muted">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span>
-          </Reveal>
-          <Reveal delay={0.06}>
-            <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.05] tracking-tight text-foreground md:text-6xl">
-              Let&apos;s talk about your project.
-            </h1>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <p className="mt-5 text-lg leading-relaxed text-muted">
-              Whether you&apos;re a founder with a product to ship, a team that needs a
-              senior engineer, or a recruiter with the right role — tell me what you&apos;re
-              building and I&apos;ll reply within a couple of business days.
-            </p>
-          </Reveal>
+            Available now
+          </span>
+          <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.05] tracking-tight text-foreground md:text-6xl">
+            Let&apos;s talk about your project.
+          </h1>
+          <p className="mt-5 text-lg leading-relaxed text-muted">
+            Whether you&apos;re a founder with a product to ship, a team that needs a
+            senior engineer, or a recruiter with the right role — tell me what you&apos;re
+            building and I&apos;ll reply within a couple of business days.
+          </p>
         </div>
 
         <div className="mt-14 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
@@ -118,7 +112,7 @@ export default function ContactPage() {
           </Reveal>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
 
