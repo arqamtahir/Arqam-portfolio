@@ -136,7 +136,7 @@ function SocialLink({
     <a
       href={href}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener noreferrer me"
       className="inline-flex h-11 items-center gap-2 rounded-full border border-border px-5 text-sm font-medium text-muted transition-colors hover:border-border-strong hover:text-foreground"
     >
       {icon} {label}

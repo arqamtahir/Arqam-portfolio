@@ -74,7 +74,7 @@ export function Footer() {
                   <a
                     href={href}
                     {...(external
-                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      ? { target: "_blank", rel: "noopener noreferrer me" }
                       : {})}
                     className="group inline-flex items-center gap-3 text-sm text-muted transition-colors hover:text-foreground"
                   >
