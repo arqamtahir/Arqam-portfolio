@@ -17,7 +17,14 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "About",
   description:
-    "Arqam Tahir — a Senior Software Engineer who builds web products where performance is the experience. Engineering philosophy, working style, and the journey behind the work.",
+    "Arqam Tahir — a full stack engineer building Next.js and React products where performance is the experience. Working style, philosophy, and remote work.",
+  keywords: [
+    "full stack engineer",
+    "Next.js",
+    "React",
+    "frontend architecture",
+    "remote",
+  ],
   path: "/about",
 });
 

@@ -12,7 +12,13 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "Playground",
   description:
-    "A lab of engineered UI systems — interaction patterns, motion studies, and frontend experiments that inform production work.",
+    "A lab of frontend engineering and UI systems — interaction design, motion studies, and Next.js experiments that inform production work.",
+  keywords: [
+    "frontend engineering",
+    "UI systems",
+    "interaction design",
+    "Next.js",
+  ],
   path: "/playground",
 });
 

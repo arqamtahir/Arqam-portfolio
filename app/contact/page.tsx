@@ -10,7 +10,14 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "Contact",
   description:
-    "Get in touch with Arqam Tahir — available for freelance projects, consulting, full-time roles, and startup collaborations. Remote-ready across EST, CET, GST, and PKT.",
+    "Get in touch to hire Arqam Tahir, a senior developer available for Next.js freelance, consulting, and full-time roles. Remote-ready across global time zones.",
+  keywords: [
+    "hire",
+    "senior developer",
+    "Next.js",
+    "remote",
+    "available",
+  ],
   path: "/contact",
 });
 

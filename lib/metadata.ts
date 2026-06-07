@@ -5,7 +5,7 @@ export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://arqamtahir.com";
 
 const defaultDescription =
-  "Arqam Tahir — Senior Software Engineer & Full Stack Developer building high-performance, SEO-optimized web applications with React, Next.js, Vue, and Node.js.";
+  "Arqam Tahir — Senior Software Engineer building high-performance, SEO-optimized web apps with React, Next.js, TypeScript, Node.js, and a focus on speed.";
 
 export const baseMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -20,6 +20,7 @@ export const baseMetadata: Metadata = {
     "Full Stack Developer",
     "Next.js Developer",
     "React Developer",
+    "TypeScript",
     "Vue Developer",
     "MERN Stack",
     "SEO Engineering",
@@ -61,6 +62,7 @@ export function pageMetadata({
   path = "/",
   ogType = "website",
   article,
+  keywords,
 }: {
   title: string;
   description?: string;
@@ -71,11 +73,13 @@ export function pageMetadata({
     authors?: string[];
     tags?: string[];
   };
+  keywords?: string[];
 }): Metadata {
   const desc = description ?? defaultDescription;
   return {
     title,
     description: desc,
+    ...(keywords ? { keywords } : {}),
     alternates: { canonical: path },
     openGraph: {
       type: ogType,

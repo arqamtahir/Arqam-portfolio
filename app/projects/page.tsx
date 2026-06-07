@@ -7,7 +7,13 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "Projects",
   description:
-    "Production case studies from Arqam Tahir — Nice2Stay, StayWithLumina, and Hotel Weekend. The challenge, the engineering, and the measurable outcomes behind each platform.",
+    "Production case studies from Arqam Tahir — the challenge, the Next.js and full stack engineering, and the measurable performance outcomes behind each build.",
+  keywords: [
+    "case studies",
+    "Next.js",
+    "full stack",
+    "performance",
+  ],
   path: "/projects",
 });
 
