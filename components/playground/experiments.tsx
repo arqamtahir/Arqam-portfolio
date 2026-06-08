@@ -39,7 +39,7 @@ function useCoarsePointer() {
 }
 
 /* ──────────────────────────────────────────────────────────
-   1. Spotlight Grid — pointer-tracked glow + parallax tilt
+   1. Spotlight Grid - pointer-tracked glow + parallax tilt
    ────────────────────────────────────────────────────────── */
 function SpotlightCard({ label, hint }: { label: string; hint: string }) {
   const ref = React.useRef<HTMLDivElement>(null);
@@ -111,7 +111,7 @@ export function SpotlightGrid() {
 }
 
 /* ──────────────────────────────────────────────────────────
-   2. Command Palette — keyboard-first, fuzzy, layoutId highlight
+   2. Command Palette - keyboard-first, fuzzy, layoutId highlight
    ────────────────────────────────────────────────────────── */
 const paletteItems = [
   { icon: Home, label: "Go to Home", kbd: "H" },
@@ -218,7 +218,7 @@ export function CommandPalette() {
 }
 
 /* ──────────────────────────────────────────────────────────
-   3. Metric Explorer — interactive latency model
+   3. Metric Explorer - interactive latency model
    ────────────────────────────────────────────────────────── */
 function Slider({
   label,
@@ -262,7 +262,7 @@ export function MetricExplorer() {
   const [replicas, setReplicas] = React.useState(3);
   const reduce = useReducedMotion();
 
-  // A small, legible model (illustrative — not a benchmark).
+  // A small, legible model (illustrative - not a benchmark).
   const base = 40;
   const pressure = (load / 100) * (180 / replicas);
   const cacheRelief = (cache / 100) * 70;
@@ -306,7 +306,7 @@ export function MetricExplorer() {
 }
 
 /* ──────────────────────────────────────────────────────────
-   4. Stagger Lab — replayable choreography
+   4. Stagger Lab - replayable choreography
    ────────────────────────────────────────────────────────── */
 const staggerPresets = {
   Tight: 0.03,
@@ -381,7 +381,7 @@ export function StaggerLab() {
 }
 
 /* ──────────────────────────────────────────────────────────
-   5. Bento Morph — shared-layout re-flow
+   5. Bento Morph - shared-layout re-flow
    ────────────────────────────────────────────────────────── */
 const bentoModes = {
   Overview: [
@@ -445,7 +445,7 @@ export function BentoMorph() {
 }
 
 /* ──────────────────────────────────────────────────────────
-   6. Magnetic Controls — spring cursor magnetism
+   6. Magnetic Controls - spring cursor magnetism
    ────────────────────────────────────────────────────────── */
 function MagneticButton({
   children,
@@ -506,7 +506,7 @@ export function MagneticControls() {
       </div>
       <p className="text-center text-xs text-subtle">
         {coarse
-          ? "Touch detected — magnetism is disabled; controls stay tappable."
+          ? "Touch detected - magnetism is disabled; controls stay tappable."
           : "Move your cursor near a control to feel the spring."}
       </p>
     </div>
@@ -514,7 +514,7 @@ export function MagneticControls() {
 }
 
 /* ──────────────────────────────────────────────────────────
-   7. Typewriter Intelligence — human-cadence typing
+   7. Typewriter Intelligence - human-cadence typing
    ────────────────────────────────────────────────────────── */
 const TYPE_PHRASES = [
   "performance is the experience",
@@ -615,7 +615,7 @@ export function TypewriterIntelligence() {
 }
 
 /* ──────────────────────────────────────────────────────────
-   8. Physics Spring Playground — drag, spring-back, repel
+   8. Physics Spring Playground - drag, spring-back, repel
    ────────────────────────────────────────────────────────── */
 type DotApi = {
   el: React.RefObject<HTMLButtonElement | null>;
@@ -806,7 +806,7 @@ export function SpringPlayground() {
       </div>
       <p className="mt-3 text-center text-xs text-subtle">
         {coarse
-          ? "Tap an element to flick it — it springs home with the configured physics."
+          ? "Tap an element to flick it - it springs home with the configured physics."
           : "Drag an element and release. Neighbors nudge aside when crowded."}
       </p>
     </div>
@@ -814,7 +814,7 @@ export function SpringPlayground() {
 }
 
 /* ──────────────────────────────────────────────────────────
-   9. Live Code Token Highlighter — regex tokenizer + mirror
+   9. Live Code Token Highlighter - regex tokenizer + mirror
    ────────────────────────────────────────────────────────── */
 const TOKEN_SEED = `// a tokenizer rehearses real editor plumbing
 type Status = "idle" | "loading" | "ready";
@@ -995,7 +995,7 @@ export function TokenHighlighter() {
 }
 
 /* ──────────────────────────────────────────────────────────
-   10. Scroll Timeline Visualizer — scroll-driven, keyboard-safe
+   10. Scroll Timeline Visualizer - scroll-driven, keyboard-safe
    ────────────────────────────────────────────────────────── */
 const TIMELINE = [
   { key: "Requirements", body: "Define the problem precisely." },
@@ -1077,7 +1077,7 @@ export function ScrollTimeline() {
         onKeyDown={onKey}
         tabIndex={0}
         role="region"
-        aria-label="Engineering lifecycle timeline — scroll or use arrow keys"
+        aria-label="Engineering lifecycle timeline - scroll or use arrow keys"
         className="flex gap-4 overflow-x-auto rounded-xl border border-border bg-background/60 p-4 [scrollbar-width:thin] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       >
         {TIMELINE.map((m, i) => (
@@ -1114,7 +1114,7 @@ export function ScrollTimeline() {
 }
 
 /* ──────────────────────────────────────────────────────────
-   Registry — id → live component
+   Registry - id → live component
    ────────────────────────────────────────────────────────── */
 export const experimentComponents: Record<string, React.ComponentType> = {
   "spotlight-grid": SpotlightGrid,

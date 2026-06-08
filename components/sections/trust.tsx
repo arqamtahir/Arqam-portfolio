@@ -15,7 +15,7 @@ export function Trust() {
           </p>
         </Reveal>
 
-        {/* Real platforms — no fabricated client logos, just the work itself. */}
+        {/* Real platforms - no fabricated client logos, just the work itself. */}
         <StaggerGroup className="mt-8 grid gap-4 sm:grid-cols-3">
           {projects.map((p) => (
             <StaggerItem key={p.slug}>
@@ -59,7 +59,7 @@ export function Trust() {
                 </blockquote>
                 <figcaption className="mt-5 text-sm">
                   <span className="font-medium text-foreground">{t.author}</span>
-                  <span className="text-muted"> — {t.role}</span>
+                  <span className="text-muted"> - {t.role}</span>
                 </figcaption>
               </figure>
             ))}
@@ -70,7 +70,7 @@ export function Trust() {
             <div className="mt-6 flex flex-col items-center gap-3 rounded-2xl border border-dashed border-border bg-surface-muted/40 px-6 py-10 text-center">
               <Quote className="h-6 w-6 text-subtle" />
               <p className="max-w-md text-sm leading-relaxed text-muted">
-                References from past collaborators are available on request — and
+                References from past collaborators are available on request - and
                 client testimonials will land here soon.
               </p>
               <Link

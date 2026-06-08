@@ -18,7 +18,7 @@ export function Process() {
             How I work
           </h2>
           <p className="max-w-md text-sm text-muted">
-            Seven deliberate stages — each one de-risks the next and keeps quality
+            Seven deliberate stages - each one de-risks the next and keeps quality
             measurable.
           </p>
         </div>

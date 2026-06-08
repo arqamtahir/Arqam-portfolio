@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "Projects",
   description:
-    "Production case studies from Arqam Tahir — the challenge, the Next.js and full stack engineering, and the measurable performance outcomes behind each build.",
+    "Production case studies from Arqam Tahir - the challenge, the Next.js and full stack engineering, and the measurable performance outcomes behind each build.",
   keywords: [
     "case studies",
     "Next.js",
@@ -31,7 +31,7 @@ export default function ProjectsPage() {
           <br className="hidden sm:block" /> documented as case studies.
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-          Three travel and hospitality platforms I engineered end-to-end — each
+          Three travel and hospitality platforms I engineered end-to-end - each
           told as a story of the problem, the approach, and the measurable impact.
           Every fact here comes from real, shipped work.
         </p>

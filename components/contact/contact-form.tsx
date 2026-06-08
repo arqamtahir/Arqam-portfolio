@@ -52,7 +52,7 @@ export function ContactForm() {
           Message received.
         </h3>
         <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted">
-          Thanks for reaching out — I&apos;ll get back to you within a couple of
+          Thanks for reaching out - I&apos;ll get back to you within a couple of
           business days. For anything urgent, email me directly at {profile.email}.
         </p>
       </motion.div>
@@ -65,7 +65,7 @@ export function ContactForm() {
       className="rounded-3xl border border-border bg-surface p-6 md:p-8"
       noValidate
     >
-      {/* Honeypot — visually hidden, off-screen, not announced. */}
+      {/* Honeypot - visually hidden, off-screen, not announced. */}
       <div aria-hidden className="absolute left-[-9999px]" tabIndex={-1}>
         <label>
           Company URL

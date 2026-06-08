@@ -44,13 +44,13 @@ export default function ContactPage() {
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-muted">
             Whether you&apos;re a founder with a product to ship, a team that needs a
-            senior engineer, or a recruiter with the right role — tell me what you&apos;re
+            senior engineer, or a recruiter with the right role - tell me what you&apos;re
             building and I&apos;ll reply within a couple of business days.
           </p>
         </div>
 
         <div className="mt-14 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
-          {/* Left — contact rail */}
+          {/* Left - contact rail */}
           <Reveal className="flex flex-col gap-8">
             <div>
               <h2 className="text-xs font-medium uppercase tracking-wide text-subtle">
@@ -107,13 +107,13 @@ export default function ContactPage() {
               </div>
               <dl className="mt-5 flex flex-col gap-3 text-sm">
                 <Detail icon={<MapPin className="h-4 w-4 text-subtle" />} label="Based in" value={profile.location} />
-                <Detail icon={<MapPin className="h-4 w-4 text-subtle" />} label="Open to" value={profile.relocation.replace("Open to relocation — ", "")} />
+                <Detail icon={<MapPin className="h-4 w-4 text-subtle" />} label="Open to" value={profile.relocation.replace("Open to relocation - ", "")} />
                 <Detail icon={<Clock className="h-4 w-4 text-subtle" />} label="Time zones" value="EST · CET · GST · PKT" />
               </dl>
             </div>
           </Reveal>
 
-          {/* Right — form */}
+          {/* Right - form */}
           <Reveal delay={0.08}>
             <ContactForm />
           </Reveal>

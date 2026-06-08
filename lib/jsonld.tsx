@@ -28,7 +28,7 @@ export function personJsonLd() {
       width: 2176,
       height: 3840,
       caption:
-        "Arqam Tahir — Senior Software Engineer, Next.js and React specialist",
+        "Arqam Tahir - Senior Software Engineer, Next.js and React specialist",
     },
     sameAs: [profile.links.github, profile.links.linkedin],
     knowsAbout: [

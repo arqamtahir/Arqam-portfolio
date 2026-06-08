@@ -18,7 +18,7 @@ export const contactSchema = z.object({
   message: z
     .string()
     .trim()
-    .min(10, "A little more detail helps — at least 10 characters.")
+    .min(10, "A little more detail helps - at least 10 characters.")
     .max(4000),
   // Honeypot: must stay empty (bots fill it).
   company_url: z.string().max(0).optional().or(z.literal("")),

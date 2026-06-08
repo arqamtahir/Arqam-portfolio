@@ -33,7 +33,7 @@ export function Hero() {
       />
 
       <div className="container-page relative grid items-center gap-12 pb-16 pt-16 md:pb-24 md:pt-24 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
-        {/* Left — value proposition */}
+        {/* Left - value proposition */}
         <div className="max-w-xl">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-3 py-1.5 text-xs font-medium text-muted backdrop-blur">
@@ -106,12 +106,12 @@ export function Hero() {
               <span className="hidden h-1 w-1 rounded-full bg-border-strong sm:block" />
               <span>MERN / MEAN specialist</span>
               <span className="hidden h-1 w-1 rounded-full bg-border-strong sm:block" />
-              <span>{profile.relocation.replace("Open to relocation — ", "")}</span>
+              <span>{profile.relocation.replace("Open to relocation - ", "")}</span>
             </div>
           </motion.div>
         </div>
 
-        {/* Right — engineering instrument panel */}
+        {/* Right - engineering instrument panel */}
         <HeroPanel reduce={!!reduce} />
       </div>
     </section>
@@ -137,7 +137,7 @@ function HeroPanel({ reduce }: { reduce: boolean }) {
         animate={reduce ? undefined : { y: [0, -6, 0] }}
         transition={{ duration: 7, ease: "easeInOut", repeat: Infinity }}
       >
-        {/* Lighthouse gauge — large */}
+        {/* Lighthouse gauge - large */}
         <motion.div
           {...card(0.28)}
           className="group relative col-span-1 row-span-2 flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-surface/70 p-5 backdrop-blur-sm transition-colors hover:border-border-strong"

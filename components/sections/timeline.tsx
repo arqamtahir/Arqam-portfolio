@@ -33,7 +33,7 @@ export function Timeline() {
             Five years of shipping production software.
           </h2>
           <p className="mt-4 max-w-sm text-base leading-relaxed text-muted">
-            A track record across travel-tech, hospitality, and SaaS — consistently
+            A track record across travel-tech, hospitality, and SaaS - consistently
             focused on performance, scale, and measurable business outcomes.
           </p>
 

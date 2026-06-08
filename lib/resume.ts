@@ -18,7 +18,7 @@ export const profile = {
   summary:
     "Results-driven Senior Software Engineer with 5+ years of experience architecting and delivering scalable, high-performance web applications across travel-tech, hospitality, e-commerce, and SaaS platforms. Expert in full-stack JavaScript using the MERN and MEAN stacks, with a consistent record of measurable impact: sub-3s LCP, 100/100 Lighthouse SEO, and 40%+ faster component delivery.",
   location: "Lahore, Pakistan",
-  relocation: "Open to relocation — UAE / KSA / Qatar",
+  relocation: "Open to relocation - UAE / KSA / Qatar",
   remote: "Remote-ready across EST, CET, GST, and PKT time zones",
   email: "muhammadarqam920@gmail.com",
   phone: "+92 300 6161806",
@@ -35,7 +35,7 @@ export const profile = {
   },
 } as const;
 
-/** Animated counters — every value is from the resume. */
+/** Animated counters - every value is from the resume. */
 export type Metric = { label: string; value: number; prefix?: string; suffix?: string };
 export const metrics: Metric[] = [
   { label: "Years of experience", value: 5, suffix: "+" },
@@ -112,7 +112,7 @@ export const experience: Experience[] = [
     impact: [
       "Spearheaded the full frontend revamp using Vue.js and Nuxt.js, improving developer velocity by 40% through modular, reusable component design.",
       "Achieved a perfect 100/100 Lighthouse SEO score and reduced LCP to under 3 seconds via SSR, image optimization, lazy loading, and strategic caching.",
-      "Engineered an intelligent booking interface with custom date pickers, dynamic availability filters, and real-time property data — lifting search-to-booking conversion.",
+      "Engineered an intelligent booking interface with custom date pickers, dynamic availability filters, and real-time property data - lifting search-to-booking conversion.",
       "Implemented internationalized routing and multilingual (i18n/L10n) support across 5+ language markets, including RTL layout support.",
       "Decomposed monolithic components into a scalable architecture, cutting new-feature development time by 40%+.",
     ],
@@ -134,16 +134,16 @@ export const experience: Experience[] = [
   },
   {
     company: "StayWithLumina",
-    role: "Software Engineer (Full Stack — MERN)",
+    role: "Software Engineer (Full Stack - MERN)",
     period: "Jul 2022 – Jul 2023",
     industry: "Vacation Rental Platform",
     location: "Remote",
     impact: [
-      "Architected and delivered the end-to-end full-stack build using Next.js, React, Node.js, and MongoDB — from database design to production deployment.",
+      "Architected and delivered the end-to-end full-stack build using Next.js, React, Node.js, and MongoDB - from database design to production deployment.",
       "Integrated Guesty's property management API to synchronize listings, real-time availability, reservations, and guest data, eliminating manual data entry.",
       "Implemented SSR, dynamic routing, and Framer Motion animations, boosting Core Web Vitals.",
       "Built custom booking workflows and availability-aware filters, reducing booking abandonment.",
-      "Ensured API reliability through error boundaries and retry logic — achieving 99%+ uptime for critical booking flows.",
+      "Ensured API reliability through error boundaries and retry logic - achieving 99%+ uptime for critical booking flows.",
     ],
     tech: ["Next.js", "React", "Node.js", "MongoDB", "Guesty API", "Framer Motion"],
   },
@@ -191,7 +191,7 @@ export const projects: Project[] = [
     challenge:
       "A hospitality SaaS platform needed a complete frontend overhaul to improve performance, organic discoverability, and the booking experience across multiple language markets.",
     solution:
-      "Rebuilt the end-to-end frontend architecture with Vue.js and Nuxt.js — introducing SSR, a modular component system, i18n routing with RTL support, and an intelligent booking UI with custom date pickers and real-time availability.",
+      "Rebuilt the end-to-end frontend architecture with Vue.js and Nuxt.js - introducing SSR, a modular component system, i18n routing with RTL support, and an intelligent booking UI with custom date pickers and real-time availability.",
     results: [
       "100/100 Lighthouse SEO score",
       "LCP reduced to under 3 seconds",
@@ -209,7 +209,7 @@ export const projects: Project[] = [
     role: "Full Stack Engineer (MERN)",
     stack: ["Next.js", "React", "Node.js", "MongoDB", "Guesty API", "Framer Motion"],
     challenge:
-      "A short-term vacation rental business needed a production-grade platform — from database design to deployment — with reliable real-time syncing against an external property management system.",
+      "A short-term vacation rental business needed a production-grade platform - from database design to deployment - with reliable real-time syncing against an external property management system.",
     solution:
       "Delivered a full-stack MERN platform featuring SSR, dynamic routing, Framer Motion animations, custom multi-step booking workflows, and a Guesty PMS API integration with robust error boundaries and retry logic.",
     results: [
@@ -231,7 +231,7 @@ export const projects: Project[] = [
     challenge:
       "Hotel-Weekend.com ran on a legacy codebase that limited performance, SEO, and the ability to surface curated travel content to users.",
     solution:
-      "Redeveloped the platform from the ground up with Nuxt.js and Vue 3 — adding a dynamic destination and theme-based discovery system, curated filters, lazy-loaded assets, and fully responsive layouts.",
+      "Redeveloped the platform from the ground up with Nuxt.js and Vue 3 - adding a dynamic destination and theme-based discovery system, curated filters, lazy-loaded assets, and fully responsive layouts.",
     results: [
       "Near-perfect Lighthouse performance & SEO",
       "Improved SERP rankings and organic traffic",
@@ -244,7 +244,7 @@ export const projects: Project[] = [
 
 /**
  * Long-form case-study content for project detail pages.
- * STRICTLY derived from the resume — no fabricated infrastructure, metrics,
+ * STRICTLY derived from the resume - no fabricated infrastructure, metrics,
  * clients, or claims. Architecture layers only name technologies the resume
  * explicitly attributes to each project.
  */
@@ -280,11 +280,11 @@ export const caseStudies: Record<string, CaseStudy> = {
   nice2stay: {
     slug: "nice2stay",
     summary:
-      "As Senior Software Engineer at Nice2Stay, I led a complete frontend revamp of a hospitality SaaS booking platform — rebuilding it on Vue.js and Nuxt.js to achieve a perfect Lighthouse SEO score, sub-3-second LCP, and internationalized reach across 5+ language markets.",
+      "As Senior Software Engineer at Nice2Stay, I led a complete frontend revamp of a hospitality SaaS booking platform - rebuilding it on Vue.js and Nuxt.js to achieve a perfect Lighthouse SEO score, sub-3-second LCP, and internationalized reach across 5+ language markets.",
     problem: [
       "The existing frontend held back performance, organic discoverability, and the booking experience across multiple language markets.",
       "Monolithic components slowed feature delivery and made it hard to ship consistent, high-quality UI at the pace the business needed.",
-      "International guests needed first-class, localized experiences — including right-to-left layouts — that the platform could not yet provide.",
+      "International guests needed first-class, localized experiences - including right-to-left layouts - that the platform could not yet provide.",
     ],
     solution: [
       "Spearheaded a full frontend revamp using Vue.js and Nuxt.js, introducing server-side rendering for fast first paints and SEO-ready markup.",
@@ -318,7 +318,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     challenges: [
       {
         title: "Decomposing a monolithic frontend",
-        body: "Breaking tightly coupled components into a scalable, reusable architecture without disrupting the live booking flow — ultimately cutting feature delivery time by 40%+.",
+        body: "Breaking tightly coupled components into a scalable, reusable architecture without disrupting the live booking flow - ultimately cutting feature delivery time by 40%+.",
       },
       {
         title: "SEO at SSR scale",
@@ -337,25 +337,25 @@ export const caseStudies: Record<string, CaseStudy> = {
     ],
     learnings: [
       "SSR and a disciplined asset strategy are what turn a fast framework into a perfect Lighthouse score in production.",
-      "Investing early in a modular component system compounds — it paid back as 40%+ faster feature delivery.",
+      "Investing early in a modular component system compounds - it paid back as 40%+ faster feature delivery.",
       "Internationalization and RTL are architecture decisions, not afterthoughts; baking them into routing kept the system clean.",
     ],
   },
   staywithlumina: {
     slug: "staywithlumina",
     summary:
-      "I architected and delivered StayWithLumina end-to-end as the full-stack (MERN) engineer — from database design to production deployment — integrating Guesty's property management API for real-time listing and reservation sync, and hardening booking-critical flows to 99%+ uptime.",
+      "I architected and delivered StayWithLumina end-to-end as the full-stack (MERN) engineer - from database design to production deployment - integrating Guesty's property management API for real-time listing and reservation sync, and hardening booking-critical flows to 99%+ uptime.",
     problem: [
-      "A short-term vacation rental business needed a production-grade platform built from the ground up — database design through deployment.",
+      "A short-term vacation rental business needed a production-grade platform built from the ground up - database design through deployment.",
       "Listings, availability, reservations, and guest data had to stay reliably in sync with an external property management system, eliminating manual data entry.",
       "Booking-critical endpoints needed to stay reliable under real traffic to avoid lost reservations and abandonment.",
     ],
     solution: [
-      "Architected and delivered the full-stack build with Next.js, React, Node.js, and MongoDB — owning everything from data modeling to production deployment.",
+      "Architected and delivered the full-stack build with Next.js, React, Node.js, and MongoDB - owning everything from data modeling to production deployment.",
       "Integrated Guesty's property management API to synchronize listings, real-time availability, reservations, and guest data automatically.",
       "Implemented SSR, dynamic routing, and Framer Motion animations to boost Core Web Vitals and the feel of the product.",
       "Built custom multi-step booking workflows and availability-aware filters to reduce booking abandonment.",
-      "Ensured API reliability through error boundaries and retry logic — achieving 99%+ uptime on critical booking flows.",
+      "Ensured API reliability through error boundaries and retry logic - achieving 99%+ uptime on critical booking flows.",
     ],
     architecture: [
       {
@@ -382,7 +382,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     challenges: [
       {
         title: "Reliable third-party sync",
-        body: "Keeping listings, availability, and reservations consistent with Guesty's API in real time — without manual data entry — demanded careful integration and reconciliation.",
+        body: "Keeping listings, availability, and reservations consistent with Guesty's API in real time - without manual data entry - demanded careful integration and reconciliation.",
       },
       {
         title: "Resilience on booking flows",
@@ -390,7 +390,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       },
       {
         title: "Owning the full stack solo",
-        body: "Designing the data model, API, and UI as one coherent system — from MongoDB schema to deployed product — while keeping Core Web Vitals strong.",
+        body: "Designing the data model, API, and UI as one coherent system - from MongoDB schema to deployed product - while keeping Core Web Vitals strong.",
       },
     ],
     performance: [
@@ -400,7 +400,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       { label: "Booking abandonment", value: "Reduced", detail: "With availability-aware filters and multi-step flows." },
     ],
     learnings: [
-      "A resilient integration layer — retries and error boundaries — is what separates a demo from a 99%+ uptime booking system.",
+      "A resilient integration layer - retries and error boundaries - is what separates a demo from a 99%+ uptime booking system.",
       "Owning the stack end-to-end lets the data model, API, and UI evolve together instead of fighting each other.",
       "Motion and SSR can coexist with strong Core Web Vitals when animation is applied deliberately, not decoratively.",
     ],
@@ -408,10 +408,10 @@ export const caseStudies: Record<string, CaseStudy> = {
   "hotel-weekend": {
     slug: "hotel-weekend",
     summary:
-      "I led the full redevelopment of Hotel-Weekend.com from the ground up on Nuxt.js and Vue 3 — transforming a legacy codebase into a high-performance, SEO-first discovery platform with a dynamic destination and theme-based browsing system, and near-perfect Lighthouse scores.",
+      "I led the full redevelopment of Hotel-Weekend.com from the ground up on Nuxt.js and Vue 3 - transforming a legacy codebase into a high-performance, SEO-first discovery platform with a dynamic destination and theme-based browsing system, and near-perfect Lighthouse scores.",
     problem: [
       "Hotel-Weekend.com ran on a legacy codebase that capped performance, SEO, and the ability to surface curated travel content.",
-      "Users needed a richer way to discover stays — by destination and theme — rather than a flat, slow catalog.",
+      "Users needed a richer way to discover stays - by destination and theme - rather than a flat, slow catalog.",
       "The experience had to be fast and fully responsive across iOS, Android, and desktop to compete for organic traffic.",
     ],
     solution: [
@@ -440,7 +440,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     challenges: [
       {
         title: "Rebuilding without losing SEO equity",
-        body: "Replacing a legacy codebase from the ground up while improving — not jeopardizing — SERP rankings and organic traffic required an SEO-first rebuild.",
+        body: "Replacing a legacy codebase from the ground up while improving - not jeopardizing - SERP rankings and organic traffic required an SEO-first rebuild.",
       },
       {
         title: "Designing for discovery",
@@ -458,7 +458,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       { label: "Devices", value: "iOS · Android · Desktop", detail: "Fully responsive across platforms." },
     ],
     learnings: [
-      "A ground-up rebuild is the moment to make SEO structural — it's far cheaper than retrofitting it later.",
+      "A ground-up rebuild is the moment to make SEO structural - it's far cheaper than retrofitting it later.",
       "Discovery UX (destinations, themes, curation) drives engagement metrics as much as raw performance does.",
       "Lazy loading and responsive layouts are non-negotiable for holding Lighthouse scores across real devices.",
     ],
@@ -491,7 +491,7 @@ export const services: Service[] = [
   {
     outcome: "Build and launch production-ready SaaS products",
     value:
-      "End-to-end MERN/MEAN builds — from database design to deployment — shipped as scalable, maintainable products, not prototypes.",
+      "End-to-end MERN/MEAN builds - from database design to deployment - shipped as scalable, maintainable products, not prototypes.",
     included: [
       "Full-stack architecture & data modeling",
       "SSR/SSG, real-time data & API integrations",
@@ -518,7 +518,7 @@ export const services: Service[] = [
   {
     outcome: "Modernize and rescue legacy frontends",
     value:
-      "Decompose monolithic codebases into modular, reusable architecture — cutting feature delivery time by 40%+.",
+      "Decompose monolithic codebases into modular, reusable architecture - cutting feature delivery time by 40%+.",
     included: [
       "Frontend re-architecture (React / Vue)",
       "Design-system & component library work",
@@ -570,7 +570,7 @@ export const services: Service[] = [
 ];
 
 /**
- * Testimonials — PLACEHOLDER / TODO.
+ * Testimonials - PLACEHOLDER / TODO.
  * No quotes are fabricated. Replace `quote`, `author`, and `role` with real,
  * approved testimonials. Set `placeholder: false` to display a card.
  */
@@ -585,21 +585,21 @@ export const testimonials: Testimonial[] = [
   {
     quote:
       "TODO: Add a real, approved client or colleague testimonial here. Quotes will not be fabricated.",
-    author: "TODO — Name",
-    role: "TODO — Role, Company",
+    author: "TODO - Name",
+    role: "TODO - Role, Company",
     placeholder: true,
   },
   {
     quote:
       "TODO: Add a second real testimonial. Reach out to a past collaborator from Nice2Stay, StayWithLumina, or Hotel Weekend.",
-    author: "TODO — Name",
-    role: "TODO — Role, Company",
+    author: "TODO - Name",
+    role: "TODO - Role, Company",
     placeholder: true,
   },
 ];
 
 export const expertise = [
-  { title: "Frontend Engineering", description: "React, Next.js, Vue, Nuxt — component-driven systems that ship pixel-perfect, accessible UI." },
+  { title: "Frontend Engineering", description: "React, Next.js, Vue, Nuxt - component-driven systems that ship pixel-perfect, accessible UI." },
   { title: "Backend Engineering", description: "Node.js, Express, NestJS, REST/GraphQL APIs, and resilient integration strategies." },
   { title: "Cloud & DevOps", description: "AWS, Docker, GitHub Actions, and CI/CD pipelines for reliable, repeatable deploys." },
   { title: "AI Integrations", description: "OpenAI, LangChain, RAG, and vector databases woven into real product features." },
@@ -642,7 +642,7 @@ export const languages = [
 export const faqs = [
   {
     q: "What kind of projects do you take on?",
-    a: "Full-stack web applications and SaaS products — primarily in React/Next.js and Vue/Nuxt — spanning greenfield builds, frontend modernizations, performance/SEO engagements, and AI feature integration.",
+    a: "Full-stack web applications and SaaS products - primarily in React/Next.js and Vue/Nuxt - spanning greenfield builds, frontend modernizations, performance/SEO engagements, and AI feature integration.",
   },
   {
     q: "Are you available for freelance and consulting work?",
@@ -658,7 +658,7 @@ export const faqs = [
   },
   {
     q: "Do you build multilingual / international products?",
-    a: "Yes — I've shipped i18n/L10n across 5+ language markets including full right-to-left (RTL) layout support.",
+    a: "Yes - I've shipped i18n/L10n across 5+ language markets including full right-to-left (RTL) layout support.",
   },
 ];
 

@@ -32,7 +32,7 @@ export function Footer() {
               {profile.name}
             </Link>
             <p className="mt-6 max-w-md text-balance text-xl font-medium leading-snug tracking-tight text-foreground md:text-2xl">
-              Building fast, accessible web products that scale — from system
+              Building fast, accessible web products that scale - from system
               architecture to the final pixel.
             </p>
             <p className="mt-4 text-sm text-subtle">

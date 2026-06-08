@@ -1,6 +1,6 @@
 import { OG_SIZE, OG_CONTENT_TYPE, renderOg } from "@/lib/og";
 
-export const alt = "About Arqam Tahir — engineering philosophy & approach";
+export const alt = "About Arqam Tahir - engineering philosophy & approach";
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
 

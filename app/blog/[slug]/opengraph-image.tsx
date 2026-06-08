@@ -1,7 +1,7 @@
 import { OG_SIZE, OG_CONTENT_TYPE, renderOg } from "@/lib/og";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 
-export const alt = "Blog post — Arqam Tahir";
+export const alt = "Blog post - Arqam Tahir";
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
 

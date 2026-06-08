@@ -136,7 +136,7 @@ function FeaturedProject({ project, reduce }: { project: Project; reduce: boolea
         href={`/projects/${project.slug}`}
         className="group grid overflow-hidden rounded-3xl border border-border bg-surface transition-all duration-300 hover:border-border-strong hover:shadow-elevated lg:grid-cols-2"
       >
-        {/* Left — narrative */}
+        {/* Left - narrative */}
         <div className="flex flex-col justify-between gap-8 p-8 md:p-10">
           <div>
             <div className="flex items-center gap-3 text-xs">
@@ -165,7 +165,7 @@ function FeaturedProject({ project, reduce }: { project: Project; reduce: boolea
           </div>
         </div>
 
-        {/* Right — outcomes */}
+        {/* Right - outcomes */}
         <div className="flex flex-col justify-center gap-3 border-t border-border bg-surface-muted/40 p-8 md:p-10 lg:border-l lg:border-t-0">
           <span className="text-xs font-medium uppercase tracking-wide text-accent">
             Headline outcomes

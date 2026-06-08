@@ -51,7 +51,7 @@ function caseStudyJsonLd(slug: string) {
             url: imageUrl,
             width: 1200,
             height: 800,
-            caption: `${project.name} — developed by Arqam Tahir, Senior Software Engineer`,
+            caption: `${project.name} - developed by Arqam Tahir, Senior Software Engineer`,
           },
         }
       : {}),

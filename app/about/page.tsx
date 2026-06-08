@@ -17,7 +17,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "About",
   description:
-    "Arqam Tahir — a full stack engineer building Next.js and React products where performance is the experience. Working style, philosophy, and remote work.",
+    "Arqam Tahir - a full stack engineer building Next.js and React products where performance is the experience. Working style, philosophy, and remote work.",
   keywords: [
     "full stack engineer",
     "Next.js",
@@ -37,7 +37,7 @@ export default function AboutPage() {
         className="pointer-events-none absolute -top-48 left-1/2 h-[34rem] w-[52rem] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"
       />
       <section className="group/hero relative">
-        {/* Large grayscale portrait — bleeds to the right edge, fades under the text */}
+        {/* Large grayscale portrait - bleeds to the right edge, fades under the text */}
         <div
           style={{ transform: "translateX(-6%) scale(1.18)", transformOrigin: "bottom center" }}
           className="pointer-events-none absolute inset-y-0 right-0 z-0 w-[78%] sm:w-[64%] lg:w-[56%]"
@@ -65,10 +65,10 @@ export default function AboutPage() {
             <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl">
               I build web products where{" "}
               <span className="text-accent">performance is the experience</span>{" "}
-              — not an afterthought.
+              - not an afterthought.
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted">
-              I&apos;m Arqam — a senior engineer specializing in high-performance,
+              I&apos;m Arqam - a senior engineer specializing in high-performance,
               SEO-first web applications across travel-tech, hospitality, and SaaS.
               I care about the boring parts that users feel: speed, reliability,
               reach, and interfaces that get out of the way.
@@ -113,14 +113,14 @@ export default function AboutPage() {
             <p>
               I started in a consultancy, shipping frontends across a stream of
               client projects. That breadth taught me to learn a domain fast and to
-              respect a deadline — but it left me wanting to own outcomes, not just
+              respect a deadline - but it left me wanting to own outcomes, not just
               tickets.
             </p>
             <p>
               So I moved toward product engineering: first building a vacation-rental
               platform end-to-end, then modernizing a legacy travel product, then
               leading a full frontend revamp as a senior engineer. The throughline was
-              always the same — make it fast, make it findable, make it feel
+              always the same - make it fast, make it findable, make it feel
               considered.
             </p>
             <p className="text-foreground">
@@ -137,7 +137,7 @@ export default function AboutPage() {
         <Reveal>
           <blockquote className="mx-auto max-w-4xl text-balance text-center text-3xl font-medium leading-snug tracking-tight text-foreground md:text-4xl">
             “The best engineering is invisible. Users don&apos;t notice the
-            architecture — they notice that the product just{" "}
+            architecture - they notice that the product just{" "}
             <span className="text-accent">feels right</span>.”
           </blockquote>
         </Reveal>
@@ -215,7 +215,7 @@ export default function AboutPage() {
                 Growth measured in scope, not titles.
               </h2>
               <p className="mt-5 max-w-xs text-[0.975rem] leading-relaxed text-muted">
-                Each role added a layer — from clean delivery, to full ownership, to
+                Each role added a layer - from clean delivery, to full ownership, to
                 modernizing systems, to senior architecture and reach.
               </p>
             </Reveal>
@@ -275,8 +275,8 @@ export default function AboutPage() {
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-muted">
               If you&apos;re building something where performance, reach, and craft
-              matter — for product work, consulting, or a deeper engineering
-              conversation — I&apos;d like to hear about it.
+              matter - for product work, consulting, or a deeper engineering
+              conversation - I&apos;d like to hear about it.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <Link

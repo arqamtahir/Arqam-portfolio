@@ -5,13 +5,13 @@ export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://arqamtahir.com";
 
 const defaultDescription =
-  "Arqam Tahir — Senior Software Engineer building high-performance, SEO-optimized web apps with React, Next.js, TypeScript, Node.js, and a focus on speed.";
+  "Arqam Tahir - Senior Software Engineer building high-performance, SEO-optimized web apps with React, Next.js, TypeScript, Node.js, and a focus on speed.";
 
 export const baseMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${profile.name} — ${profile.titles[0]}`,
-    template: `%s — ${profile.name}`,
+    default: `${profile.name} - ${profile.titles[0]}`,
+    template: `%s - ${profile.name}`,
   },
   description: defaultDescription,
   keywords: [
@@ -41,12 +41,12 @@ export const baseMetadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: profile.name,
-    title: `${profile.name} — ${profile.titles[0]}`,
+    title: `${profile.name} - ${profile.titles[0]}`,
     description: defaultDescription,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${profile.name} — ${profile.titles[0]}`,
+    title: `${profile.name} - ${profile.titles[0]}`,
     description: defaultDescription,
   },
   robots: {
@@ -85,7 +85,7 @@ export function pageMetadata({
       type: ogType,
       locale: "en_US",
       siteName: profile.name,
-      title: `${title} — ${profile.name}`,
+      title: `${title} - ${profile.name}`,
       description: desc,
       url: `${siteUrl}${path}`,
       ...(ogType === "article" && article
@@ -98,7 +98,7 @@ export function pageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} — ${profile.name}`,
+      title: `${title} - ${profile.name}`,
       description: desc,
     },
   };

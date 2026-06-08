@@ -6,7 +6,7 @@ import { profile } from "@/lib/resume";
  * Contact endpoint.
  * Email delivery is scaffolded via Resend and only runs when RESEND_API_KEY
  * is configured. Without a key, the submission is validated and logged so the
- * UX works end-to-end in any environment — no secrets required to develop.
+ * UX works end-to-end in any environment - no secrets required to develop.
  */
 export async function POST(req: Request) {
   let body: unknown;
@@ -26,7 +26,7 @@ export async function POST(req: Request) {
 
   const { company_url, ...data } = parsed.data;
 
-  // Honeypot tripped — pretend success, do nothing.
+  // Honeypot tripped - pretend success, do nothing.
   if (company_url) {
     return NextResponse.json({ ok: true });
   }
@@ -42,7 +42,7 @@ export async function POST(req: Request) {
         from: process.env.CONTACT_FROM_EMAIL ?? "Portfolio <onboarding@resend.dev>",
         to,
         replyTo: data.email,
-        subject: `New inquiry — ${data.intent} — ${data.name}`,
+        subject: `New inquiry - ${data.intent} - ${data.name}`,
         text: [
           `Name: ${data.name}`,
           `Email: ${data.email}`,

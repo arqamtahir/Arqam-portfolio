@@ -1,6 +1,6 @@
 import { OG_SIZE, OG_CONTENT_TYPE, renderOg } from "@/lib/og";
 
-export const alt = "Get in Touch — Let's work together";
+export const alt = "Get in Touch - Let's work together";
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
 

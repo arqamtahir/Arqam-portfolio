@@ -13,7 +13,7 @@ export function Services() {
           <SectionHeader
             eyebrow="Services"
             title="Outcomes I deliver"
-            description="Not a list of technologies — the concrete results I help teams and founders ship."
+            description="Not a list of technologies - the concrete results I help teams and founders ship."
           />
           <Link
             href="/contact"

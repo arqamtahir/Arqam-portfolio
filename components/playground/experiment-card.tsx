@@ -71,7 +71,7 @@ export function ExperimentCard({
         {Live && inView ? <Live /> : <div className="min-h-[12rem]" aria-hidden />}
       </div>
 
-      {/* Footer — tags + why */}
+      {/* Footer - tags + why */}
       <footer className="border-t border-border p-6 md:p-7">
         <div className="flex flex-wrap gap-1.5">
           {meta.tags.map((t) => (
@@ -84,7 +84,7 @@ export function ExperimentCard({
           ))}
         </div>
         <p className="mt-4 border-l-2 border-border pl-3 text-sm leading-relaxed text-muted">
-          <span className="font-medium text-foreground">Why it exists — </span>
+          <span className="font-medium text-foreground">Why it exists - </span>
           {meta.why}
         </p>
       </footer>

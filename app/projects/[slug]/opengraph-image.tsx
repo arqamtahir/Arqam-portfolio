@@ -1,7 +1,7 @@
 import { OG_SIZE, OG_CONTENT_TYPE, renderOg } from "@/lib/og";
 import { projects } from "@/lib/resume";
 
-export const alt = "Project case study — Arqam Tahir";
+export const alt = "Project case study - Arqam Tahir";
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
 

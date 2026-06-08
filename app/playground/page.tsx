@@ -12,7 +12,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "Playground",
   description:
-    "A lab of frontend engineering and UI systems — interaction design, motion studies, and Next.js experiments that inform production work.",
+    "A lab of frontend engineering and UI systems - interaction design, motion studies, and Next.js experiments that inform production work.",
   keywords: [
     "frontend engineering",
     "UI systems",
@@ -26,7 +26,7 @@ const principles = [
   {
     n: "01",
     title: "Experiments earn their way into production",
-    body: "Nothing here is decoration. Each module rehearses a problem I hit in real work — focus management, perceived performance, layout continuity — so the solution is ready before the deadline is.",
+    body: "Nothing here is decoration. Each module rehearses a problem I hit in real work - focus management, perceived performance, layout continuity - so the solution is ready before the deadline is.",
   },
   {
     n: "02",
@@ -36,7 +36,7 @@ const principles = [
   {
     n: "03",
     title: "It has to survive a thumb",
-    body: "Every interaction degrades gracefully on touch and coarse pointers. Hover-only cleverness that breaks on a phone isn't craft — it's a bug with good lighting.",
+    body: "Every interaction degrades gracefully on touch and coarse pointers. Hover-only cleverness that breaks on a phone isn't craft - it's a bug with good lighting.",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function PlaygroundPage() {
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
             A space for interaction systems, UI experiments, and frontend
             engineering exploration. Each one is a small, working answer to a
-            problem that shows up in real products — and a window into how I
+            problem that shows up in real products - and a window into how I
             think about motion, state, and craft.
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function PlaygroundPage() {
           <SectionHeading
             eyebrow="Featured"
             title="The ones worth slowing down for"
-            sub="The strongest of the set — each one live, interactive, and explained."
+            sub="The strongest of the set - each one live, interactive, and explained."
           />
         </Reveal>
         <div className="mt-10 grid gap-6">
@@ -101,7 +101,7 @@ export default function PlaygroundPage() {
           <SectionHeading
             eyebrow="Design system"
             title="The primitives underneath"
-            sub="The same tokens, scales, and curves the rest of this site is built from — shown live."
+            sub="The same tokens, scales, and curves the rest of this site is built from - shown live."
           />
         </Reveal>
         <div className="mt-10">
@@ -145,7 +145,7 @@ export default function PlaygroundPage() {
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted">
                 If this is the level of craft you want on a real product, the
-                case studies show it shipped — and the contact form is one click
+                case studies show it shipped - and the contact form is one click
                 away.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">

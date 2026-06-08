@@ -1,5 +1,5 @@
 /**
- * Blog content system — file-based, zero CMS.
+ * Blog content system - file-based, zero CMS.
  *
  * Source of truth is Markdown in /content/blog/*.md with frontmatter:
  *   title, date (YYYY-MM-DD), excerpt, category, tags[], slug, draft?

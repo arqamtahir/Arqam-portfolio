@@ -132,7 +132,7 @@ export function CaseStudy({
           <div className="relative aspect-video overflow-hidden rounded-xl border border-border bg-surface shadow-sm">
             <Image
               src={`/images/projects/${project.slug}.png`}
-              alt={`${project.name} — built by Arqam Tahir using ${project.stack
+              alt={`${project.name} - built by Arqam Tahir using ${project.stack
                 .slice(0, 3)
                 .join(", ")}`}
               fill
@@ -214,7 +214,7 @@ export function CaseStudy({
           {/* Architecture */}
           <Block id="architecture" eyebrow="04" title="Technical architecture">
             <p className="mb-6 leading-relaxed text-muted">
-              How the system fits together — each layer reflects technology used on
+              How the system fits together - each layer reflects technology used on
               the real build.
             </p>
             <ArchitectureDiagram layers={study.architecture} />

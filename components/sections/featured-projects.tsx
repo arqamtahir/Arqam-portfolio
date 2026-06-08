@@ -27,7 +27,7 @@ export function FeaturedProjects() {
               Case studies, not screenshots.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">
-              Three production platforms — the challenge, the engineering decisions,
+              Three production platforms - the challenge, the engineering decisions,
               and the results that followed.
             </p>
           </Reveal>

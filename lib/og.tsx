@@ -5,7 +5,7 @@ export const OG_CONTENT_TYPE = "image/png";
 
 /**
  * Shared Open Graph / Twitter card renderer.
- * Uses the system font stack baked into next/og — no font assets required.
+ * Uses the system font stack baked into next/og - no font assets required.
  */
 export function renderOg({
   eyebrow,

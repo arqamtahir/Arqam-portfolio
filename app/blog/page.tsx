@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "Blog",
   description:
-    "Engineering notes on Next.js performance, frontend architecture, and SEO — practical write-ups from building production web applications.",
+    "Engineering notes on Next.js performance, frontend architecture, and SEO - practical write-ups from building production web applications.",
   path: "/blog",
 });
 
@@ -27,7 +27,7 @@ export default function BlogPage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
             Practical write-ups on performance engineering, frontend
-            architecture, and technical SEO — the decisions behind shipping
+            architecture, and technical SEO - the decisions behind shipping
             fast, durable web applications.
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function BlogPage() {
         {posts.length > 0 ? (
           <BlogIndex posts={posts} categories={categories} />
         ) : (
-          <p className="text-muted">No posts published yet — check back soon.</p>
+          <p className="text-muted">No posts published yet - check back soon.</p>
         )}
       </section>
     </div>
