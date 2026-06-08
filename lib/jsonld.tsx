@@ -19,7 +19,7 @@ export function personJsonLd() {
     "@type": "Person",
     name: profile.name,
     url: siteUrl,
-    email: profile.email,
+    email: profile.links.email,
     jobTitle: profile.titles[0],
     description: profile.summary,
     image: {
@@ -60,6 +60,26 @@ export function personJsonLd() {
       "@type": "PostalAddress",
       addressLocality: "Lahore",
       addressCountry: "PK",
+    },
+  };
+}
+
+export function contactPageJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: `Contact - ${profile.name}`,
+    url: `${siteUrl}/contact`,
+    mainEntity: {
+      "@type": "Person",
+      name: profile.name,
+      email: profile.links.email,
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "professional inquiry",
+        email: profile.links.email,
+        availableLanguage: ["English", "Urdu"],
+      },
     },
   };
 }

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Download, Mail, MapPin, Clock } from "lucide-react";
 import { ContactForm } from "@/components/contact/contact-form";
-import { CopyEmail } from "@/components/ui/copy-email";
+import { EmailCopy } from "@/components/ui/copy-email";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/icons";
 import { Reveal } from "@/components/motion";
 import { profile } from "@/lib/resume";
 import { pageMetadata } from "@/lib/metadata";
+import { JsonLd, contactPageJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = pageMetadata({
   title: "Contact",
@@ -24,6 +25,7 @@ export const metadata: Metadata = pageMetadata({
 export default function ContactPage() {
   return (
     <div className="relative overflow-hidden pb-24 pt-28 md:pt-32">
+      <JsonLd data={contactPageJsonLd()} />
       <div
         aria-hidden
         className="pointer-events-none absolute -top-40 left-1/2 h-[32rem] w-[48rem] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"
@@ -56,7 +58,7 @@ export default function ContactPage() {
               <h2 className="text-xs font-medium uppercase tracking-wide text-subtle">
                 Reach me directly
               </h2>
-              <div className="mt-4 flex flex-col gap-3">
+              <div className="mt-4 flex items-center gap-3">
                 <a
                   href={profile.links.email}
                   className="group flex items-center gap-3 text-sm text-foreground"
@@ -66,9 +68,7 @@ export default function ContactPage() {
                   </span>
                   <span className="break-all group-hover:text-accent">{profile.email}</span>
                 </a>
-                <div className="flex flex-wrap gap-3 pl-[3.25rem]">
-                  <CopyEmail />
-                </div>
+                <EmailCopy iconOnly />
               </div>
             </div>
 

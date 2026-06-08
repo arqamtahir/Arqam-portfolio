@@ -53,7 +53,14 @@ export function ContactForm() {
         </h3>
         <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted">
           Thanks for reaching out - I&apos;ll get back to you within a couple of
-          business days. For anything urgent, email me directly at {profile.email}.
+          business days. For anything urgent, email me directly at{" "}
+          <a
+            href={profile.links.email}
+            className="font-medium text-foreground underline transition-colors hover:text-accent"
+          >
+            {profile.email}
+          </a>
+          .
         </p>
       </motion.div>
     );
