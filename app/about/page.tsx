@@ -36,9 +36,26 @@ export default function AboutPage() {
         aria-hidden
         className="pointer-events-none absolute -top-48 left-1/2 h-[34rem] w-[52rem] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"
       />
-      <section className="container-page relative">
-        <div className="grid items-center gap-12 lg:grid-cols-[1fr_minmax(280px,360px)] lg:gap-16">
-          <div className="max-w-3xl">
+      <section className="group/hero relative">
+        {/* Large grayscale portrait — bleeds to the right edge, fades under the text */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-0 w-[78%] sm:w-[64%] lg:w-[56%]">
+          <div className="relative h-full w-full [mask-image:linear-gradient(to_right,transparent,#000_42%)] [-webkit-mask-image:linear-gradient(to_right,transparent,#000_42%)]">
+            <Image
+              src="/images/arqam-tahir-cutout.png"
+              alt="Arqam Tahir, senior full stack engineer specializing in Next.js and React"
+              fill
+              priority
+              sizes="(max-width: 1024px) 64vw, 56vw"
+              className="object-contain object-right-bottom opacity-70 grayscale contrast-[1.05] transition-all duration-700 ease-out group-hover/hero:opacity-90 group-hover/hero:grayscale-0 sm:opacity-90 lg:opacity-100"
+            />
+            {/* Soft bottom fade so the figure grounds into the page */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background to-transparent" />
+          </div>
+        </div>
+
+        {/* Text column sits above the portrait */}
+        <div className="container-page relative z-10">
+          <div className="max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-[0.18em] text-subtle">
               {profile.titles[0]} · {profile.experienceYears} years
             </p>
@@ -47,7 +64,7 @@ export default function AboutPage() {
               <span className="text-accent">performance is the experience</span>{" "}
               — not an afterthought.
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted">
+            <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted">
               I&apos;m Arqam — a senior engineer specializing in high-performance,
               SEO-first web applications across travel-tech, hospitality, and SaaS.
               I care about the boring parts that users feel: speed, reliability,
@@ -61,81 +78,6 @@ export default function AboutPage() {
               </dl>
             </Reveal>
           </div>
-
-          <Reveal delay={0.12} className="order-first lg:order-none">
-            <div className="relative mx-auto w-full max-w-[340px]">
-              {/* Accent glow */}
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-accent/20 blur-3xl"
-              />
-              {/* Decorative ring */}
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -inset-3 -z-10 rounded-[2rem] border border-accent/20"
-              />
-
-              <div className="group relative aspect-[3/4] w-full overflow-hidden rounded-[1.75rem] border border-border bg-gradient-to-b from-surface to-background shadow-2xl shadow-accent/10 ring-1 ring-inset ring-white/5">
-                {/* Theme-matched backdrop behind the cutout */}
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute inset-0 grid-dots opacity-[0.18] [mask-image:radial-gradient(ellipse_at_center,#000_30%,transparent_75%)]"
-                />
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute left-1/2 top-1/3 h-3/4 w-3/4 -translate-x-1/2 -translate-y-1/4 rounded-full bg-accent/25 blur-3xl"
-                />
-                <Image
-                  src="/images/arqam-tahir-transparent.png"
-                  alt="Arqam Tahir, senior full stack engineer specializing in Next.js and React, in a tailored brown suit"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 340px, 360px"
-                  className="object-cover object-top drop-shadow-2xl transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                />
-                {/* Accent tint */}
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-accent/20 via-transparent to-transparent mix-blend-overlay"
-                />
-                {/* Bottom fade into the page background */}
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-background via-background/60 to-transparent"
-                />
-                {/* Status pill, anchored in the faded zone */}
-                <div className="absolute inset-x-4 bottom-4 flex items-center gap-2 rounded-full border border-border bg-surface/80 px-3.5 py-2 backdrop-blur">
-                  <span className="relative flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-                  </span>
-                  <span className="text-xs font-medium text-foreground">
-                    Available for new projects
-                  </span>
-                </div>
-              </div>
-
-              {/* Floating skill chips */}
-              <span
-                className="absolute -left-5 top-10 hidden rounded-xl border border-border bg-surface/90 px-3 py-1.5 font-mono text-xs text-foreground shadow-lg backdrop-blur sm:block"
-                style={{ transform: "rotate(-4deg)" }}
-              >
-                Next.js
-              </span>
-              <span
-                className="absolute -right-4 top-1/3 hidden rounded-xl border border-border bg-surface/90 px-3 py-1.5 font-mono text-xs text-foreground shadow-lg backdrop-blur sm:block"
-                style={{ transform: "rotate(5deg)" }}
-              >
-                React
-              </span>
-              <span
-                className="absolute -right-6 bottom-24 hidden rounded-xl border border-accent/40 bg-accent/10 px-3 py-1.5 font-mono text-xs text-accent shadow-lg backdrop-blur sm:block"
-                style={{ transform: "rotate(-3deg)" }}
-              >
-                Web Performance
-              </span>
-            </div>
-          </Reveal>
         </div>
       </section>
 
