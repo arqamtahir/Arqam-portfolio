@@ -38,8 +38,11 @@ export default function AboutPage() {
       />
       <section className="group/hero relative">
         {/* Large grayscale portrait — bleeds to the right edge, fades under the text */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-0 w-[78%] sm:w-[64%] lg:w-[56%]">
-          <div className="relative h-full w-full [mask-image:linear-gradient(to_right,transparent,#000_42%)] [-webkit-mask-image:linear-gradient(to_right,transparent,#000_42%)]">
+        <div
+          style={{ transform: "translateX(-6%) scale(1.18)", transformOrigin: "bottom center" }}
+          className="pointer-events-none absolute inset-y-0 right-0 z-0 w-[78%] sm:w-[64%] lg:w-[56%]"
+        >
+          <div className="relative h-full w-full [mask-image:linear-gradient(to_right,transparent,#000_38%)] [-webkit-mask-image:linear-gradient(to_right,transparent,#000_38%)]">
             <Image
               src="/images/arqam-tahir-cutout.png"
               alt="Arqam Tahir, senior full stack engineer specializing in Next.js and React"
