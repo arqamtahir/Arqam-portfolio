@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/motion";
-import { EmailCopy } from "@/components/ui/copy-email";
 import { profile } from "@/lib/resume";
 import {
   principles,
@@ -302,7 +301,6 @@ export default function AboutPage() {
               >
                 See the work
               </Link>
-              <EmailCopy className="ml-1" />
             </div>
           </div>
         </Reveal>
